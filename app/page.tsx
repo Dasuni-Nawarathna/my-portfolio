@@ -1,86 +1,109 @@
 import React from 'react';
+import ProjectCard from '@/components/ProjectCard';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center p-8 md:p-24">
+    <main className="min-h-screen bg-[#0a0a0a] text-white font-sans selection:bg-yellow-500 selection:text-black">
+      {/* Navigation */}
+      <nav className="flex justify-between items-center p-8 max-w-7xl mx-auto">
+        <div className="text-2xl font-black tracking-tighter">DASUNI.</div>
+        <div className="hidden md:flex gap-8 text-sm uppercase tracking-widest text-gray-400">
+          <a href="#" className="text-white">Home</a>
+          <a href="#" className="hover:text-white transition-colors">Work</a>
+          <a href="#" className="hover:text-white transition-colors">About</a>
+        </div>
+        <button className="bg-yellow-500 text-black px-6 py-2 rounded-full font-bold hover:bg-yellow-400 transition-all">
+          Get In Touch
+        </button>
+      </nav>
+
       {/* Hero Section */}
-      <section className="text-center mb-16">
-        <h1 className="text-5xl font-bold tracking-tight">Dasuni Nawarathna</h1>
-        <p className="text-xl mt-4 text-gray-600">Information Technology Undergraduate</p>
-      </section>
+      <div className="flex flex-col md:flex-row min-h-[80vh]">
+        {/* Left Content */}
+        <div className="flex-1 flex flex-col justify-center px-8 md:px-24 py-12">
+          <p className="text-yellow-500 uppercase tracking-[0.3em] mb-4 font-semibold">IT Undergraduate & Developer</p>
+          <h1 className="text-6xl md:text-8xl font-black uppercase leading-none tracking-tighter mb-8">
+            DASUNI <br /> NAWARATHNA
+          </h1>
+          <p className="italic text-xl md:text-2xl text-gray-400 mb-12 max-w-lg">
+            Software Developer & Creative Professional specializing in Next.js, Python, and AI multimedia.
+          </p>
+          
+          <div className="flex flex-wrap gap-4">
+            <button className="bg-yellow-500 text-black px-8 py-4 rounded-full font-black uppercase tracking-widest hover:scale-105 transition-transform">
+              Explore Work ↗
+            </button>
+            <a href="#about" className="border border-gray-800 px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-all">
+              Learn More
+            </a>
+          </div>
+        </div>
+
+        {/* Right Image Placeholder */}
+        <div className="flex-1 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-transparent to-transparent z-10" />
+          <img 
+            src="/dasuni.JPG" 
+            alt="Dasuni Nawarathna" 
+            className="w-full h-full object-cover grayscale contrast-125 opacity-80"
+          />
+        </div>
+      </div>
 
       {/* About Segment */}
-      <section className="max-w-3xl w-full mb-16 bg-gray-50 p-8 rounded-2xl border border-gray-100">
-        <h2 className="text-3xl font-semibold mb-6">About Her</h2>
-        <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
-          <p>
-            Dasuni is a dedicated second-year Information Technology student at the 
-            <strong> Sri Lanka Institute of Information Technology (SLIIT)</strong>. 
-            She specializes in building robust web applications and exploring the 
-            intersection of Data Science and Software Engineering.
-          </p>
-          <p>
-            With a strong foundation in <strong>Java, Python, and Next.js</strong>, 
-            she focuses on creating user-centric digital experiences. Her academic 
-            and project history includes full-stack development with MongoDB, 
-            low-level systems programming in C, and data analysis using Machine 
-            Learning frameworks.
-          </p>
-          <p>
-            Beyond coding, she is an alumna of Sri Sangamitta Girls National School 
-            and holds a Diploma in English, combining technical proficiency with 
-            clear communication and professional documentation skills.
-          </p>
-        </div>
-      </section>
+<section id="about" className="max-w-3xl w-full mb-16 bg-[#111] p-8 rounded-2xl border border-gray-800 scroll-mt-24">
+  <h2 className="text-3xl font-semibold mb-6 text-yellow-500">About Her</h2>
+  <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
+    <p>
+      Dasuni is a dedicated second-year Information Technology student at the 
+      <strong> Sri Lanka Institute of Information Technology (SLIIT)</strong>. 
+      She specializes in building robust web applications and exploring the 
+      intersection of Data Science and Software Engineering.
+    </p>
+    <p>
+      With a strong foundation in <strong>Java, Python, and Next.js</strong>, 
+      she focuses on creating user-centric digital experiences. Her academic 
+      and project history includes full-stack development with MongoDB, 
+      low-level systems programming in C, and data analysis using Machine 
+      Learning frameworks.
+    </p>
+    <p>
+      Beyond coding, she is an alumna of Sri Sangamitta Girls National School 
+      and holds a Diploma in English, combining technical proficiency with 
+      clear communication skills.
+    </p>
+  </div>
+</section>
 
-      {/* Skills & Tools Section */}
-      <section className="w-full max-w-5xl mb-16">
-        <h2 className="text-3xl font-semibold mb-8 text-center">Technical Proficiency</h2>
-        <div className="flex flex-wrap justify-center gap-4">
-              {['Java', 'Python', 'Next.js', 'React', 'MongoDB', 'MySQL', 'C', 'Tailwind CSS'].map((skill) => (
-              <span key={skill} className="px-4 py-2 bg-blue-50 text-blue-700 rounded-full font-medium border border-blue-100">
-              {skill}
-        </span>
-        ))}
+      {/* Projects Section */}
+      <section id="work" className="max-w-7xl mx-auto px-8 py-24">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+          <div>
+            <p className="text-yellow-500 uppercase tracking-widest font-bold mb-2">Selected Work</p>
+            <h2 className="text-5xl font-black uppercase">Featured Projects</h2>
+          </div>
         </div>
-      </section>
 
-      {/* Projects Gallery */}
-      <section className="w-full max-w-5xl">
-        <h2 className="text-3xl font-semibold mb-8 text-center">Featured Work</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="p-6 border rounded-xl hover:shadow-lg transition-shadow">
-            <h3 className="font-bold text-xl mb-2">MyBizness App</h3>
-            <p className="text-gray-600">A full-stack mobile application built with Next.js and MongoDB Atlas.</p>
-          </div>
-          <div className="p-6 border rounded-xl hover:shadow-lg transition-shadow">
-            <h3 className="font-bold text-xl mb-2">Tour Management System</h3>
-            <p className="text-gray-600">System design and use case architecture for complex operations.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="w-full max-w-3xl text-center py-12 border-t border-gray-200">
-        <h2 className="text-3xl font-semibold mb-4">Get In Touch</h2>
-        <p className="text-gray-600 mb-8 text-lg">
-         Dasuni is currently open to internship opportunities and collaborative projects.
-        </p>
-        <div className="flex justify-center gap-8">
-        <a href="https://github.com/your-username" target="_blank" className="text-blue-600 hover:underline font-bold text-lg">
-        GitHub
-        </a>
-        <a href="https://linkedin.com/in/your-username" target="_blank" className="text-blue-600 hover:underline font-bold text-lg">
-        LinkedIn
-        </a>
-        <a href="mailto:your-email@example.com" className="text-blue-600 hover:underline font-bold text-lg">
-        Email
-        </a>
+          {/* 2. Use the component with specific data for Dasuni's projects */}
+          <ProjectCard 
+            title="MyBizness App"
+            category="Full-Stack Development"
+            description="A business management platform featuring a Next.js frontend and MongoDB Atlas integration for real-time data handling."
+            tags={['Next.js', 'MongoDB', 'Tailwind']}
+            link="https://github.com/your-username/mybizness"
+            imagePath="/mybizness-preview.jpg" // Add this image to your public folder
+          />
+          
+          <ProjectCard 
+            title="Tour Ops System"
+            category="System Design"
+            description="A comprehensive management system for tour operations, showcasing structured use case modeling for tourism logistics."
+            tags={['Java', 'MySQL', 'System Design']}
+            link="#" 
+          />
         </div>
       </section>
     </main>
-
-    
   );
 }
