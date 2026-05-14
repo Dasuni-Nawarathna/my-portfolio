@@ -9,8 +9,8 @@ export default function Home() {
         <div className="text-2xl font-black tracking-tighter">DASUNI.</div>
         <div className="hidden md:flex gap-8 text-sm uppercase tracking-widest text-gray-400">
           <a href="#" className="text-white">Home</a>
-          <a href="#" className="hover:text-white transition-colors">Work</a>
-          <a href="#" className="hover:text-white transition-colors">About</a>
+          <a href="#work" className="hover:text-white transition-colors">Work</a>
+          <a href="#about" className="hover:text-white transition-colors">About</a>
         </div>
         <button className="bg-yellow-500 text-black px-6 py-2 rounded-full font-bold hover:bg-yellow-400 transition-all">
           Get In Touch
@@ -30,11 +30,11 @@ export default function Home() {
           </p>
           
           <div className="flex flex-wrap gap-4">
-            <button className="bg-yellow-500 text-black px-8 py-4 rounded-full font-black uppercase tracking-widest hover:scale-105 transition-transform">
+            <a href="#work" className="bg-yellow-500 text-black px-8 py-4 rounded-full font-black uppercase tracking-widest hover:scale-105 transition-transform">
               Explore Work ↗
-            </button>
+            </a>
             <a href="#about" className="border border-gray-800 px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-all">
-              Learn More
+              About Me
             </a>
           </div>
         </div>
@@ -76,7 +76,7 @@ export default function Home() {
 </section>
 
       {/* Projects Section */}
-      <section id="work" className="max-w-7xl mx-auto px-8 py-24">
+      <section id="work" className="max-w-7xl mx-auto px-8 py-24 scroll-mt-24">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
           <div>
             <p className="text-yellow-500 uppercase tracking-widest font-bold mb-2">Selected Work</p>
@@ -91,7 +91,7 @@ export default function Home() {
             category="Full-Stack Development"
             description="A business management platform featuring a Next.js frontend and MongoDB Atlas integration for real-time data handling."
             tags={['Next.js', 'MongoDB', 'Tailwind']}
-            link="https://github.com/your-username/mybizness"
+            link="https://github.com/Ravindu-Hettiarachchi/mybiznezz.git"
             imagePath="/mybizness-preview.jpg" // Add this image to your public folder
           />
           
@@ -100,7 +100,7 @@ export default function Home() {
             category="System Design"
             description="A comprehensive management system for tour operations, showcasing structured use case modeling for tourism logistics."
             tags={['Java', 'MySQL', 'System Design']}
-            link="#" 
+            link="https://github.com/Dasuni-Nawarathna/YataraCeylon.git" 
           />
         </div>
       </section>
