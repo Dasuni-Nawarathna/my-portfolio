@@ -12,36 +12,38 @@ interface ProjectProps {
 
 export default function ProjectCard({ title, category, description, tags, link, imagePath }: ProjectProps) {
   return (
-    <div className="group relative bg-[#111] border border-gray-800 rounded-3xl overflow-hidden hover:border-yellow-500/50 transition-all duration-500">
+    <div className="group relative glass rounded-3xl overflow-hidden hover-scale transition-all duration-300">
       {/* Project Image Section */}
-      <div className="h-48 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center overflow-hidden">
+      <div className="h-48 bg-linear-to-br from-[#232323] to-[#181818] flex items-center justify-center overflow-hidden">
         {imagePath ? (
           <img 
             src={imagePath} 
             alt={title} 
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60 group-hover:opacity-100" 
+            className="w-full h-full object-cover grayscale contrast-125 opacity-70 group-hover:scale-110 group-hover:opacity-100 transition-transform duration-500" 
           />
         ) : (
-          <span className="text-gray-600 font-bold tracking-widest uppercase text-xs">Project Preview</span>
+          <span className="text-gray-700 font-bold tracking-widest uppercase text-xs">Project Preview</span>
         )}
       </div>
-      
+
       <div className="p-8">
-        <p className="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">{category}</p>
-        <h3 className="text-2xl font-bold mb-3 group-hover:text-yellow-500 transition-colors">{title}</h3>
-        <p className="text-gray-400 text-sm leading-relaxed mb-6">
+        <p className="gold text-xs font-bold uppercase tracking-widest mb-2">{category}</p>
+        <h3 className="text-2xl font-extrabold mb-3 group-hover:gold transition-colors heading-tight uppercase tracking-tight">
+          {title}
+        </h3>
+        <p className="text-gray-200 text-base leading-relaxed mb-6">
           {description}
         </p>
-        
+
         <div className="flex flex-wrap gap-2 mb-8">
           {tags.map((tag) => (
-            <span key={tag} className="text-[10px] uppercase tracking-tighter border border-gray-700 px-2 py-1 rounded text-gray-400">
+            <span key={tag} className="text-[10px] uppercase tracking-tighter border border-gray-700 px-2 py-1 rounded text-gray-400 bg-white/5 backdrop-blur-sm">
               {tag}
             </span>
           ))}
         </div>
-        
-        <a href={link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-white font-bold text-sm uppercase tracking-wider group-hover:gap-4 transition-all">
+
+        <a href={link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 gold font-bold text-sm uppercase tracking-wider hover:gap-4 hover-scale transition-all">
           View Repository <span>→</span>
         </a>
       </div>
