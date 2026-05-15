@@ -18,9 +18,12 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
-  title: "Dasuni Nawarathna — IT Undergraduate & Developer",
+  title: "DN | Dasuni Nawarathna",
   description:
     "Portfolio of Dasuni Nawarathna — a creative full-stack developer specialising in Next.js, Python, and AI multimedia experiences.",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
