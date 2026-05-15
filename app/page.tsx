@@ -56,7 +56,6 @@ const navLinks = [
   { label: 'Home', href: '#' },
   { label: 'About', href: '#about' },
   { label: 'Work', href: '#work' },
-  { label: 'Contact', href: '#contact' },
 ];
 
 const contacts = [
@@ -195,31 +194,20 @@ export default function Home() {
 
         {/* Right — contained portrait */}
         <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '4rem 5rem 4rem 2rem' }}>
-          <div style={{ position: 'relative' }}>
-            {/* Decorative rings */}
-            <div style={{ position: 'absolute', inset: -14, borderRadius: 20, border: '1.5px solid rgba(200,145,58,0.22)', pointerEvents: 'none' }} />
-            <div style={{ position: 'absolute', inset: -28, borderRadius: 24, border: '1px solid rgba(200,145,58,0.10)', pointerEvents: 'none' }} />
-            {/* Gold corner accents */}
-            <div style={{ position: 'absolute', top: -14, left: -14, width: 36, height: 36, borderTop: '2px solid var(--gold)', borderLeft: '2px solid var(--gold)', borderRadius: '4px 0 0 0', pointerEvents: 'none' }} />
-            <div style={{ position: 'absolute', bottom: -14, right: -14, width: 36, height: 36, borderBottom: '2px solid var(--gold)', borderRight: '2px solid var(--gold)', borderRadius: '0 0 4px 0', pointerEvents: 'none' }} />
-            {/* Portrait */}
-            <img
-              src="/dasuni.JPG"
-              alt="Dasuni Nawarathna"
-              style={{
-                width: 360,
-                height: 440,
-                objectFit: 'cover',
-                objectPosition: 'top',
-                borderRadius: 14,
-                display: 'block',
-                filter: 'grayscale(15%) contrast(1.06)',
-                boxShadow: '0 32px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.06)',
-              }}
-            />
-            {/* Bottom fade */}
-            <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 120, background: 'linear-gradient(to top, rgba(17,17,17,0.5), transparent)', borderRadius: '0 0 14px 14px', pointerEvents: 'none' }} />
-          </div>
+          <img
+            src="/dasuni.JPG"
+            alt="Dasuni Nawarathna"
+            style={{
+              width: 360,
+              height: 440,
+              objectFit: 'cover',
+              objectPosition: 'top',
+              borderRadius: 14,
+              display: 'block',
+              border: '1.5px solid rgba(255,255,255,0.12)',
+              boxShadow: '0 24px 64px rgba(0,0,0,0.45)',
+            }}
+          />
         </div>
       </section>
 
