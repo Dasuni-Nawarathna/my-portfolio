@@ -49,7 +49,7 @@ const skills = [
   { name: 'Java', rating: 4.0 },
   { name: 'MySQL', rating: 3.5 },
   { name: 'Python', rating: 3.5 },
-  { name: 'Figma', rating: 3.5 },
+  { name: 'Figma', rating: 3.0 },
 ];
 
 const navLinks = [
@@ -195,7 +195,7 @@ export default function Home() {
         {/* Right — contained portrait */}
         <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '4rem 5rem 4rem 2rem' }}>
           <img
-            src="/dasuni.JPG"
+            src="/Dasunii.jpeg"
             alt="Dasuni Nawarathna"
             style={{
               width: 360,
@@ -225,7 +225,7 @@ export default function Home() {
             {/* Photo */}
             <div className="about-photo-wrap" style={{ maxWidth: 420 }}>
               <img
-                src="/dasuni.JPG"
+                src="/Dasunii.jpeg"
                 alt="Dasuni Nawarathna"
                 style={{ width: '100%', height: 'auto', objectFit: 'cover', objectPosition: 'top', display: 'block', borderRadius: 10, filter: 'grayscale(10%) contrast(1.05)' }}
               />
@@ -352,8 +352,8 @@ export default function Home() {
                 Get In Touch
               </h2>
               <p style={{ color: 'var(--text-secondary)', lineHeight: 1.82, fontSize: '0.95rem', maxWidth: 380 }}>
-                Dasuni is currently open to internship opportunities and collaborative software projects.
-                She welcomes professional inquiries via any of the platforms below.
+                I am currently open to internship opportunities and collaborative software projects.
+                I welcome professional inquiries via any of the platforms below.
               </p>
             </div>
 
