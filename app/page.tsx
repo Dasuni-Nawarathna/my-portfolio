@@ -195,7 +195,7 @@ export default function Home() {
         {/* Right — contained portrait */}
         <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '4rem 5rem 4rem 2rem' }}>
           <img
-            src="/Dasunii.jpeg"
+            src="/dasuni.JPG"
             alt="Dasuni Nawarathna"
             style={{
               width: 360,
@@ -225,7 +225,7 @@ export default function Home() {
             {/* Photo */}
             <div className="about-photo-wrap" style={{ maxWidth: 420 }}>
               <img
-                src="/Dasunii.jpeg"
+                src="/dasuni.JPG"
                 alt="Dasuni Nawarathna"
                 style={{ width: '100%', height: 'auto', objectFit: 'cover', objectPosition: 'top', display: 'block', borderRadius: 10, filter: 'grayscale(10%) contrast(1.05)' }}
               />
