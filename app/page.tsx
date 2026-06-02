@@ -311,7 +311,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' }}>
             <ProjectCard
               title="MyBizness App"
               category="Full-Stack Development"
@@ -327,6 +327,14 @@ export default function Home() {
               tags={['Java', 'MySQL', 'System Design']}
               link="https://github.com/Dasuni-Nawarathna/YataraCeylon.git"
               imagePath="/YataraCeylon.png"
+            />
+            <ProjectCard
+              title="SplitDay App"
+              category="PWA & Full-Stack"
+              description="A Progressive Web Application (PWA) group expense splitter. Allows users to create/join trips via invite codes, manage participants, and calculate split balances and payouts in real-time."
+              tags={['Next.js', 'MongoDB', 'PWA', 'Mongoose']}
+              link="https://github.com/Dasuni-Nawarathna/SplitDay.git"
+              imagePath="/SplitDay.png"
             />
           </div>
         </div>
