@@ -311,7 +311,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '2rem' }}>
             <ProjectCard
               title="MyBizness App"
               category="Full-Stack Development"
@@ -335,6 +335,14 @@ export default function Home() {
               tags={['Next.js', 'MongoDB', 'PWA', 'Mongoose']}
               link="https://github.com/Dasuni-Nawarathna/SplitDay.git"
               imagePath="/SplitDay.png"
+            />
+            <ProjectCard
+              title="Memory Space"
+              category="PWA & Security"
+              description="A creative digital scrapbooking journal featuring WebAuthn biometric security, client-side encryption (CryptoJS), dynamic Framer Motion sticker canvas, Google Maps, and ambient music player."
+              tags={['Next.js', 'Supabase', 'Framer Motion', 'PWA']}
+              link="https://github.com/Dasuni-Nawarathna/Journal-Web"
+              imagePath="/MemorySpace.png"
             />
           </div>
         </div>
