@@ -375,38 +375,19 @@ export default function Home() {
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '2rem' }}>
-            <ProjectCard
-              title="MyBizness App"
-              category="Full-Stack Development"
-              description="A business management platform featuring a Next.js frontend and MongoDB Atlas integration for real-time data handling. Dasuni led the UI/UX and integration efforts."
-              tags={['Next.js', 'MongoDB', 'Tailwind']}
-              link="https://github.com/Ravindu-Hettiarachchi/mybiznezz.git"
-              imagePath="/MyBiznezz.png"
-            />
-            <ProjectCard
-              title="Tour Ops System"
-              category="System Design"
-              description="A comprehensive management system for tour operations, showcasing structured use case modeling for tourism logistics. Dasuni contributed to the backend and system architecture."
-              tags={['Java', 'MySQL', 'System Design']}
-              link="https://github.com/Dasuni-Nawarathna/YataraCeylon.git"
-              imagePath="/YataraCeylon.png"
-            />
-            <ProjectCard
-              title="SplitDay App"
-              category="PWA & Full-Stack"
-              description="A Progressive Web Application (PWA) group expense splitter. Allows users to create/join trips via invite codes, manage participants, and calculate split balances and payouts in real-time."
-              tags={['Next.js', 'MongoDB', 'PWA', 'Mongoose']}
-              link="https://github.com/Dasuni-Nawarathna/SplitDay.git"
-              imagePath="/SplitDay.png"
-            />
-            <ProjectCard
-              title="Memory Space"
-              category="PWA & Security"
-              description="A creative digital scrapbooking journal featuring WebAuthn biometric security, client-side encryption (CryptoJS), dynamic Framer Motion sticker canvas, Google Maps, and ambient music player."
-              tags={['Next.js', 'Supabase', 'Framer Motion', 'PWA']}
-              link="https://github.com/Dasuni-Nawarathna/Journal-Web"
-              imagePath="/MemorySpace.png"
-            />
+            {projectsData
+              .filter((p) => projectFilter === 'All' || p.filterType === projectFilter)
+              .map((project) => (
+                <ProjectCard
+                  key={project.title}
+                  title={project.title}
+                  category={project.category}
+                  description={project.description}
+                  tags={project.tags}
+                  link={project.link}
+                  imagePath={project.imagePath}
+                />
+              ))}
           </div>
         </div>
       </section>
