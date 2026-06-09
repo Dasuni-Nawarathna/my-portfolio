@@ -352,21 +352,33 @@ export default function Home() {
           </div>
 
           {/* Project Filters */}
-          <div style={{ display: 'flex', gap: 10, marginBottom: '2.5rem', flexWrap: 'wrap' }}>
+          <div style={{
+            display: 'inline-flex',
+            gap: 6,
+            marginBottom: '3rem',
+            padding: 6,
+            background: 'rgba(255, 255, 255, 0.03)',
+            backdropFilter: 'blur(8px)',
+            border: '1px solid var(--border)',
+            borderRadius: 100,
+            flexWrap: 'wrap'
+          }}>
             {['All', 'Next.js', 'Java', 'PWA'].map((filter) => (
               <button
                 key={filter}
                 onClick={() => setProjectFilter(filter)}
                 className="glass-btn"
                 style={{
-                  padding: '0.45rem 1.2rem',
+                  padding: '0.5rem 1.4rem',
                   fontSize: '0.8rem',
                   fontWeight: 600,
                   cursor: 'pointer',
                   borderRadius: 99,
+                  border: 'none',
                   color: projectFilter === filter ? 'var(--gold)' : 'var(--text-secondary)',
-                  borderColor: projectFilter === filter ? 'var(--gold)' : undefined,
-                  background: projectFilter === filter ? 'rgba(200,145,58,0.12)' : undefined,
+                  background: projectFilter === filter ? 'var(--bg-card)' : 'transparent',
+                  boxShadow: projectFilter === filter ? '0 4px 12px rgba(0,0,0,0.1)' : 'none',
+                  transition: 'all 0.25s ease',
                 }}
               >
                 {filter}
