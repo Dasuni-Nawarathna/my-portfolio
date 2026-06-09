@@ -93,9 +93,49 @@ function SectionLabel({ text }: { text: string }) {
   );
 }
 
+const projectsData = [
+  {
+    title: "MyBizness App",
+    category: "Full-Stack Development",
+    description: "A business management platform featuring a Next.js frontend and MongoDB Atlas integration for real-time data handling. Dasuni led the UI/UX and integration efforts.",
+    tags: ['Next.js', 'MongoDB', 'Tailwind'],
+    link: "https://github.com/Ravindu-Hettiarachchi/mybiznezz.git",
+    imagePath: "/MyBiznezz.png",
+    filterType: "Next.js"
+  },
+  {
+    title: "Tour Ops System",
+    category: "System Design",
+    description: "A comprehensive management system for tour operations, showcasing structured use case modeling for tourism logistics. Dasuni contributed to the backend and system architecture.",
+    tags: ['Java', 'MySQL', 'System Design'],
+    link: "https://github.com/Dasuni-Nawarathna/YataraCeylon.git",
+    imagePath: "/YataraCeylon.png",
+    filterType: "Java"
+  },
+  {
+    title: "SplitDay App",
+    category: "PWA & Full-Stack",
+    description: "A Progressive Web Application (PWA) group expense splitter. Allows users to create/join trips via invite codes, manage participants, and calculate split balances and payouts in real-time.",
+    tags: ['Next.js', 'MongoDB', 'PWA', 'Mongoose'],
+    link: "https://github.com/Dasuni-Nawarathna/SplitDay.git",
+    imagePath: "/SplitDay.png",
+    filterType: "PWA"
+  },
+  {
+    title: "Memory Space",
+    category: "PWA & Security",
+    description: "A creative digital scrapbooking journal featuring WebAuthn biometric security, client-side encryption (CryptoJS), dynamic Framer Motion sticker canvas, Google Maps, and ambient music player.",
+    tags: ['Next.js', 'Supabase', 'Framer Motion', 'PWA'],
+    link: "https://github.com/Dasuni-Nawarathna/Journal-Web",
+    imagePath: "/MemorySpace.png",
+    filterType: "PWA"
+  }
+];
+
 /* ── Page ──────────────────────────────── */
 export default function Home() {
   const [active, setActive] = useState('Home');
+  const [projectFilter, setProjectFilter] = useState('All');
 
   useEffect(() => {
     const handler = () => {
