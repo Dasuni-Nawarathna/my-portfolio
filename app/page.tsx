@@ -351,6 +351,29 @@ export default function Home() {
             </h2>
           </div>
 
+          {/* Project Filters */}
+          <div style={{ display: 'flex', gap: 10, marginBottom: '2.5rem', flexWrap: 'wrap' }}>
+            {['All', 'Next.js', 'Java', 'PWA'].map((filter) => (
+              <button
+                key={filter}
+                onClick={() => setProjectFilter(filter)}
+                className="glass-btn"
+                style={{
+                  padding: '0.45rem 1.2rem',
+                  fontSize: '0.8rem',
+                  fontWeight: 600,
+                  cursor: 'pointer',
+                  borderRadius: 99,
+                  color: projectFilter === filter ? 'var(--gold)' : 'var(--text-secondary)',
+                  borderColor: projectFilter === filter ? 'var(--gold)' : undefined,
+                  background: projectFilter === filter ? 'rgba(200,145,58,0.12)' : undefined,
+                }}
+              >
+                {filter}
+              </button>
+            ))}
+          </div>
+
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '2rem' }}>
             <ProjectCard
               title="MyBizness App"
