@@ -368,51 +368,55 @@ export default function Home() {
       {/* ════════════════════════════════════
           HERO
       ════════════════════════════════════ */}
-      <section style={{ display: 'flex', minHeight: '100vh', paddingTop: 68 }}>
+      <section style={{ display: 'flex', alignItems: 'center', minHeight: '100vh', paddingTop: 68, background: 'var(--bg-primary)' }}>
+        <div style={{ maxWidth: 1280, width: '100%', margin: '0 auto', padding: '4rem 2.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '4rem', flexWrap: 'wrap' }}>
 
-        {/* Left */}
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '4rem 3rem 4rem 5rem', maxWidth: 640 }}>
-          <SectionLabel text="IT Undergraduate & Developer" />
+          {/* Left */}
+          <div style={{ flex: '1.2', display: 'flex', flexDirection: 'column', justifyContent: 'center', maxWidth: 640, minWidth: 320 }}>
+            <SectionLabel text="IT Undergraduate & Developer" />
 
-          <h1
-            className="heading-tight"
-            style={{ fontSize: 'clamp(3.2rem, 7vw, 6.5rem)', fontWeight: 900, color: 'var(--text-primary)', marginBottom: '1.25rem', lineHeight: 1.0 }}
-          >
-            DASUNI<br />
-            <span style={{ color: 'var(--gold)' }}>NAWARATHNA</span>
-          </h1>
+            <h1
+              className="heading-tight"
+              style={{ fontSize: 'clamp(3.2rem, 7vw, 6.5rem)', fontWeight: 900, color: 'var(--text-primary)', marginBottom: '1.25rem', lineHeight: 1.0 }}
+            >
+              DASUNI<br />
+              <span style={{ color: 'var(--gold)' }}>NAWARATHNA</span>
+            </h1>
 
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1.08rem', lineHeight: 1.8, marginBottom: '2.5rem', maxWidth: 460 }}>
-            A creative full-stack developer specialising in Next.js, Python, and AI multimedia —
-            passionate about building premium digital experiences.
-          </p>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '1.08rem', lineHeight: 1.8, marginBottom: '2.5rem', maxWidth: 460 }}>
+              A creative full-stack developer specialising in Next.js, Python, and AI multimedia —
+              passionate about building premium digital experiences.
+            </p>
 
-          <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-            <a href="#work" id="hero-explore" className="gold-btn" style={{ padding: '0.85rem 2.2rem', fontSize: '0.85rem', textDecoration: 'none' }}>
-              Explore Work
-            </a>
-            <a href="#about" id="hero-about" className="glass-btn" style={{ padding: '0.85rem 2.2rem', fontSize: '0.85rem', fontWeight: 600, textDecoration: 'none', color: 'var(--text-primary)' }}>
-              About Me
-            </a>
+            <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+              <a href="#work" id="hero-explore" className="gold-btn" style={{ padding: '0.85rem 2.2rem', fontSize: '0.85rem', textDecoration: 'none' }}>
+                Explore Work
+              </a>
+              <a href="#about" id="hero-about" className="glass-btn" style={{ padding: '0.85rem 2.2rem', fontSize: '0.85rem', fontWeight: 600, textDecoration: 'none', color: 'var(--text-primary)' }}>
+                About Me
+              </a>
+            </div>
           </div>
-        </div>
 
-        {/* Right — contained portrait */}
-        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '4rem 5rem 4rem 2rem' }}>
-          <img
-            src="/dasuni.JPG"
-            alt="Dasuni Nawarathna"
-            style={{
-              width: 360,
-              height: 440,
-              objectFit: 'cover',
-              objectPosition: 'top',
-              borderRadius: 14,
-              display: 'block',
-              border: '1.5px solid rgba(255,255,255,0.12)',
-              boxShadow: '0 24px 64px rgba(0,0,0,0.45)',
-            }}
-          />
+          {/* Right — contained portrait */}
+          <div style={{ flex: '0.8', display: 'flex', alignItems: 'center', justifyContent: 'center', minWidth: 300 }}>
+            <img
+              src="/dasuni.JPG"
+              alt="Dasuni Nawarathna"
+              style={{
+                width: '100%',
+                maxWidth: 360,
+                height: 440,
+                objectFit: 'cover',
+                objectPosition: 'top',
+                borderRadius: 14,
+                display: 'block',
+                border: '1.5px solid rgba(255,255,255,0.12)',
+                boxShadow: '0 24px 64px rgba(0,0,0,0.45)',
+              }}
+            />
+          </div>
+
         </div>
       </section>
 
